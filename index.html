@@ -12,13 +12,16 @@ swap(["moe", "larry", "curly"], 0, 2);
 
 //function that generates a random number between 5 and 10
 
-function getRand() {
-    return Math.random() * (10 - 5) + 5;
-}
-console.log(getRand())
 
-function randArr() {
-    var numbers;
-    return Math.random() * 100;
+function getRand(num1, num2) {
+    var x = Math.random() * (num2 - num1) + num1;
+    return Math.round(x);
 }
-console.log(randArr())
+
+function randArr(number) {
+    var numbers = [];
+    for (var i=0; i < number; i++) {
+        numbers.push(getRand(1, 100));
+    }
+
+  //Write a function that generates an array of specified length that contains random numbers from 1 to 100.
